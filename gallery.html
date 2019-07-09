@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Erica Hsu">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bildgalleri med Flickr</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="gallery.html"><img src="images/logga.png" alt="logga"></a>
+            </div>
+
+            <div class="hamburger-menu" onclick="openNavigation()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="navigation" class="hide-nav">
+                <div class="nav-links">
+                    <a href="gallery.html">Bildgalleri</a>
+                    <a target="_blank" href="https://www.flickr.com/services/api/">Flickr API</a>
+                    <a target="_blank" href="https://www.flickr.com/services/api/misc.urls.html">Flickr URLs</a>
+                    <a target="_blank" href="https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=7f535fbe19213d16c74f0052e102d812&tags=flower&per_page=14&page=1&format=json&nojsoncallback=?">jsonFlickrApi</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="scroller" class="scroller-container">
+        <div class="container">
+            <h1>Bildgalleri med Flickr</h1>
+
+            <!-- Image Gallery Container -->
+            <div id="root" class="gallery"></div>
+            <div id="message" class="message hide"></div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption" class="caption"></div>
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+</html>
